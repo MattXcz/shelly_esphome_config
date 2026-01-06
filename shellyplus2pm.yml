@@ -1,8 +1,3 @@
-
-  # Relay trip limits
-  max_power: "3600.0"
-  max_temp: "80.0"
-
 # For PCB v0.1.9 with dual core ESP32
 esphome:
   name: "${devicename}"
