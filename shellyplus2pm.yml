@@ -17,11 +17,11 @@ i2c:
 output:
   - platform: gpio
     id: "relay_output_1"
-    pin: GPIO13
+    pin: GPIO12
 
   - platform: gpio
     id: "relay_output_2"
-    pin: GPIO12
+    pin: GPIO13
 
 #Shelly Switch Output
 switch:
