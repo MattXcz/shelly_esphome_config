@@ -230,3 +230,8 @@ button:
   - platform: safe_mode
     name: "SafeMode"
     entity_category: 'diagnostic'
+
+text_sensor:
+  - platform: version
+    name: "ESPHome Version"
+    hide_timestamp: true
