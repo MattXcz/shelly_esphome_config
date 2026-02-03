@@ -119,16 +119,27 @@ sensor:
       unit_of_measurement: A
       accuracy_decimals: 3
       icon: mdi:flash-outline
+      filters:
+        - clamp:
+            min_value: 0
+      
     voltage:
       name: "Volt"
       unit_of_measurement: V
       accuracy_decimals: 1
       icon: mdi:flash-outline
+      filters:
+        - clamp:
+            min_value: 0
+            
     power:
       name: "Příkon"
       unit_of_measurement: W
       id: power
       icon: mdi:flash-outline
+      filters:
+        - clamp:
+            min_value: 0
       on_value_range:
         - above: "3600"
           then:

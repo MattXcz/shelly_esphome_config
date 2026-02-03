@@ -157,6 +157,9 @@ sensor:
       unit_of_measurement: V
       accuracy_decimals: 1
       icon: mdi:flash-outline
+      filters:
+        - clamp:
+            min_value: 0
     # On the Shelly 2.5 channels are mixed ch1=B ch2=A
     current_a:
       name: "Napětí 2"
@@ -164,12 +167,18 @@ sensor:
       unit_of_measurement: A
       accuracy_decimals: 1
       icon: mdi:flash-outline
+      filters:
+        - clamp:
+            min_value: 0
     current_b:
       name: "Napětí 1"
       entity_category: 'diagnostic'
       unit_of_measurement: A
       accuracy_decimals: 1
       icon: mdi:flash-outline
+      filters:
+        - clamp:
+            min_value: 0
     active_power_a:
       name: "Příkon 2"
       id: power_channel_2
@@ -178,6 +187,8 @@ sensor:
       icon: mdi:flash-outline
       filters:
         - multiply: -1
+        - clamp:
+            min_value: 0
       # active_power_a is normal, so don't multiply by -1
       on_value_range:
         - above: ${max_power}
@@ -198,6 +209,8 @@ sensor:
       # active_power_b is inverted, so multiply by -1
       filters:
         - multiply: -1
+        - clamp:
+            min_value: 0
       on_value_range:
         - above: ${max_power}
           then:
